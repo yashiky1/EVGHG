@@ -1,0 +1,686 @@
+Script started on 2023-04-09 18:46:59-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m psql EVGHG
+[?2004lpsql (15.1)
+Type "help" for help.
+
+[?2004hEVGHG=# SELECT * FROM e;[Klectric_vehicles;
+[?2004l          municipality          |    county    | years | total_personal_vehicles
+ | no_evs | percent_evs 
+--------------------------------+--------------+-------+------------------------
+-+--------+-------------
+ Aberdeen township              |  Monmouth    |  2015 |                   12240
+ | 7      | 0.06%
+ Aberdeen township              |  Monmouth    |  2020 |                   14375
+ | 64     | 0.45%
+ Absecon city                   |  Atlantic    |  2015 |                    5679
+ | 2      | 0.03%
+ Absecon city                   |  Atlantic    |  2020 |                    5392
+ | 20     | 0.37%
+ Alexandria township            |  Hunterdon   |  2015 |                    3646
+ | 4      | 0.10%
+ Alexandria township            |  Hunterdon   |  2020 |                    4097
+ | 19     | 0.46%
+ Allamuchy township             |  Warren      |  2015 |                    3549
+ | 2      | 0.05%
+ Allamuchy township             |  Warren      |  2020 |                    3912
+ | 17     | 0.43%
+ Allendale borough              |  Bergen      |  2015 |                    4418
+ | 3      | 0.07%
+ Allendale borough              |  Bergen      |  2020 |                    4321
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM electric_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;f_vehicles;u_vehicles;e_vehicles;l_vehicles;
+[?2004l          municipality          |   county    | years | passenger_cars | total_m
+iles_traveled | fuel_vehicle_emissions 
+--------------------------------+-------------+-------+----------------+--------
+--------------+------------------------
+ Aberdeen township              | Monmouth    |  2017 | 97772592       | 1157795
+66            | 49605
+ Aberdeen township              | Monmouth    |  2019 | 98786829       | 1395026
+19            | 73388
+ Absecon city                   | Atlantic    |  2015 | 38488232       | 1005831
+04            | 46725
+ Absecon city                   | Atlantic    |  2020 | 25192020       | 6236613
+1             | 32488
+ Alexandria township            | Hunterdon   |  2017 | 37796863       | 4661941
+4             | 19086
+ Alexandria township            | Hunterdon   |  2019 | 23745754       | 3353275
+9             | 13312
+ Allamuchy township             | Warren      |  2017 | 33356655       | 4793719
+6             | 18071
+ Allamuchy township             | Warren      |  2019 | 24921165       | 3519262
+3             | 16085
+ Allendale borough              | Bergen      |  2017 | 42564813       | 5827129
+7             | 27772
+ Allendale borough              | Bergen      |  2019 | 45353628       | 5691215
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM fuel_vehicles;[C[1Ps;[1Ps;[1Ps;[1Ps;[1Ps;[C[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;G;H;G;
+[?2004l          municipality          |   county   | years | passenger_vehicle_emissio
+ns | total_mtco2e 
+--------------------------------+------------+-------+--------------------------
+---+--------------
+ Aberdeen township              | Monmouth   |  2015 | 49605                    
+   |        49605
+ Aberdeen township              | Monmouth   |  2020 | 73388                    
+   |        73388
+ Absecon city                   | Atlantic   |  2015 | 46725                    
+   |        46725
+ Absecon city                   | Atlantic   |  2020 | 32488                    
+   |        32488
+ Alexandria township            | Hunterdon  |  2015 | 19086                    
+   |        19086
+ Alexandria township            | Hunterdon  |  2020 | 13312                    
+   |        13312
+ Allamuchy township             | Warren     |  2015 | 18071                    
+   |        18071
+ Allamuchy township             | Warren     |  2020 | 16085                    
+   |        16085
+ Allendale borough              | Bergen     |  2015 | 27772                    
+   |        27772
+ Allendale borough              | Bergen     |  2020 | 30926                    
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM GHG;[1P;[1P;[1P;[1P; ;C;o;m;m;u;n;i;t;y;_;P;r;o;f;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%
+ Aberdeen township              | Monmouth    |  2020 | 5.6          |  18729 | 
+108132                  | 2.9%                | 78%
+ Absecon city                   | Atlantic    |  2015 | 7.2          |   8394 | 
+63656                   | 4.9%                | 91%
+ Absecon city                   | Atlantic    |  2020 | 7.2          |   8471 | 
+69293                   | 9.2%                | 91%
+ Alexandria township            | Hunterdon   |  2015 | 27.7         |   4882 | 
+130262                  | 1.6%                | 91%
+ Alexandria township            | Hunterdon   |  2020 | 27.7         |   4769 | 
+127234                  | 4.4%                | 90%
+ Allamuchy township             | Warren      |  2015 | 20.3         |   4499 | 
+88802                   | 4.0%                | 83%
+ Allamuchy township             | Warren      |  2020 | 20.3         |   4640 | 
+109212                  | 1.9%                | 86%
+ Allendale borough              | Bergen      |  2015 | 3.1          |   6717 | 
+140331                  | 4.0%                | 79%
+ Allendale borough              | Bergen      |  2020 | 3.1          |   6757 | 
+[7m--More--[27m[K[?2004hEVGHG=# [7mSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicl[27m[7me[27m[7ms WHERE municipality = 'municipality name';[27m[A[C[C[C[C[C[C[C[CSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'municipality name';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';Ae';be';se';re';ce';oe';ne'; e';ce';ie';te';ye';[C[1P';
+[?2004lERROR:  column "total_personal" does not exist
+LINE 1: SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM ele...
+               ^
+[?2004hEVGHG=# SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvehicles, NO_EVs, Percent_EVs FROM electric_vehicles[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_vehicles, NO_EVs, Percent_EVs FROM electric_vehicle[1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+(0 rows)
+
+[?2004hEVGHG=# SELECT Total_personal_vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[1P[1P[1@s[1@e
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+                    5679 | 2      | 0.03%
+                    5392 | 20     | 0.37%
+(2 rows)
+
+[?2004hEVGHG=# [7mSELECT * FROM Community_Prof INNER JOIN electric_vehicles ON Community_P[27m[7mr[27m[7mof.YEARS = electric_vehicles.YEARS;[27m[A[C[C[C[C[C[C[C[CSELECT * FROM Community_Prof INNER JOIN electric_vehicles ON Community_Prof.YEARS = electric_vehicles.YEARS;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation |          munici
+pality          |    county    | years | total_personal_vehicles | no_evs | perc
+ent_evs 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------+----------------
+----------------+--------------+-------+-------------------------+--------+-----
+--------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Wyckoff townshi
+p               |  Bergen      |  2015 |                   11639 | 9      | 0.08
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Wrightstown bor
+ough            |  Burlington  |  2015 |                     404 | 0      | 0.10
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Woolwich townsh
+ip              |  Gloucester  |  2015 |                    7378 | 4      | 0.05
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Woodstown borou
+gh              |  Salem       |  2015 |                    2396 | 1      | 0.03
+[7m--More--[27m[K [?2004hEVGHG=#  exit
+[?2004l[?2004hEVGHG-# exit
+[?2004lUse \q to quit.
+[?2004hEVGHG-# \q
+[?2004l]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m cat dbsession.log
+[?2004lScript started on 2023-04-09 18:46:59-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m psql EVGHG
+[?2004lpsql (15.1)
+Type "help" for help.
+
+[?2004hEVGHG=# SELECT * FROM e;[Klectric_vehicles;
+[?2004l          municipality          |    county    | years | total_personal_vehicles
+ | no_evs | percent_evs 
+--------------------------------+--------------+-------+------------------------
+-+--------+-------------
+ Aberdeen township              |  Monmouth    |  2015 |                   12240
+ | 7      | 0.06%
+ Aberdeen township              |  Monmouth    |  2020 |                   14375
+ | 64     | 0.45%
+ Absecon city                   |  Atlantic    |  2015 |                    5679
+ | 2      | 0.03%
+ Absecon city                   |  Atlantic    |  2020 |                    5392
+ | 20     | 0.37%
+ Alexandria township            |  Hunterdon   |  2015 |                    3646
+ | 4      | 0.10%
+ Alexandria township            |  Hunterdon   |  2020 |                    4097
+ | 19     | 0.46%
+ Allamuchy township             |  Warren      |  2015 |                    3549
+ | 2      | 0.05%
+ Allamuchy township             |  Warren      |  2020 |                    3912
+ | 17     | 0.43%
+ Allendale borough              |  Bergen      |  2015 |                    4418
+ | 3      | 0.07%
+ Allendale borough              |  Bergen      |  2020 |                    4321
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM electric_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;f_vehicles;u_vehicles;e_vehicles;l_vehicles;
+[?2004l          municipality          |   county    | years | passenger_cars | total_m
+iles_traveled | fuel_vehicle_emissions 
+--------------------------------+-------------+-------+----------------+--------
+--------------+------------------------
+ Aberdeen township              | Monmouth    |  2017 | 97772592       | 1157795
+66            | 49605
+ Aberdeen township              | Monmouth    |  2019 | 98786829       | 1395026
+19            | 73388
+ Absecon city                   | Atlantic    |  2015 | 38488232       | 1005831
+04            | 46725
+ Absecon city                   | Atlantic    |  2020 | 25192020       | 6236613
+1             | 32488
+ Alexandria township            | Hunterdon   |  2017 | 37796863       | 4661941
+4             | 19086
+ Alexandria township            | Hunterdon   |  2019 | 23745754       | 3353275
+9             | 13312
+ Allamuchy township             | Warren      |  2017 | 33356655       | 4793719
+6             | 18071
+ Allamuchy township             | Warren      |  2019 | 24921165       | 3519262
+3             | 16085
+ Allendale borough              | Bergen      |  2017 | 42564813       | 5827129
+7             | 27772
+ Allendale borough              | Bergen      |  2019 | 45353628       | 5691215
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM fuel_vehicles;[C[1Ps;[1Ps;[1Ps;[1Ps;[1Ps;[C[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;G;H;G;
+[?2004l          municipality          |   county   | years | passenger_vehicle_emissio
+ns | total_mtco2e 
+--------------------------------+------------+-------+--------------------------
+---+--------------
+ Aberdeen township              | Monmouth   |  2015 | 49605                    
+   |        49605
+ Aberdeen township              | Monmouth   |  2020 | 73388                    
+   |        73388
+ Absecon city                   | Atlantic   |  2015 | 46725                    
+   |        46725
+ Absecon city                   | Atlantic   |  2020 | 32488                    
+   |        32488
+ Alexandria township            | Hunterdon  |  2015 | 19086                    
+   |        19086
+ Alexandria township            | Hunterdon  |  2020 | 13312                    
+   |        13312
+ Allamuchy township             | Warren     |  2015 | 18071                    
+   |        18071
+ Allamuchy township             | Warren     |  2020 | 16085                    
+   |        16085
+ Allendale borough              | Bergen     |  2015 | 27772                    
+   |        27772
+ Allendale borough              | Bergen     |  2020 | 30926                    
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM GHG;[1P;[1P;[1P;[1P; ;C;o;m;m;u;n;i;t;y;_;P;r;o;f;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%
+ Aberdeen township              | Monmouth    |  2020 | 5.6          |  18729 | 
+108132                  | 2.9%                | 78%
+ Absecon city                   | Atlantic    |  2015 | 7.2          |   8394 | 
+63656                   | 4.9%                | 91%
+ Absecon city                   | Atlantic    |  2020 | 7.2          |   8471 | 
+69293                   | 9.2%                | 91%
+ Alexandria township            | Hunterdon   |  2015 | 27.7         |   4882 | 
+130262                  | 1.6%                | 91%
+ Alexandria township            | Hunterdon   |  2020 | 27.7         |   4769 | 
+127234                  | 4.4%                | 90%
+ Allamuchy township             | Warren      |  2015 | 20.3         |   4499 | 
+88802                   | 4.0%                | 83%
+ Allamuchy township             | Warren      |  2020 | 20.3         |   4640 | 
+109212                  | 1.9%                | 86%
+ Allendale borough              | Bergen      |  2015 | 3.1          |   6717 | 
+140331                  | 4.0%                | 79%
+ Allendale borough              | Bergen      |  2020 | 3.1          |   6757 | 
+[7m--More--[27m[K[?2004hEVGHG=# [7mSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicl[27m[7me[27m[7ms WHERE municipality = 'municipality name';[27m[A[C[C[C[C[C[C[C[CSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'municipality name';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';Ae';be';se';re';ce';oe';ne'; e';ce';ie';te';ye';[C[1P';
+[?2004lERROR:  column "total_personal" does not exist
+LINE 1: SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM ele...
+               ^
+[?2004hEVGHG=# SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvehicles, NO_EVs, Percent_EVs FROM electric_vehicles[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_vehicles, NO_EVs, Percent_EVs FROM electric_vehicle[1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+(0 rows)
+
+[?2004hEVGHG=# SELECT Total_personal_vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[1P[1P[1@s[1@e
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+                    5]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m cat dbsession.log
+[?2004lScript started on 2023-04-09 18:46:59-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m psql EVGHG
+[?2004lpsql (15.1)
+Type "help" for help.
+
+[?2004hEVGHG=# SELECT * FROM e;[Klectric_vehicles;
+[?2004l          municipality          |    county    | years | total_personal_vehicles
+ | no_evs | percent_evs 
+--------------------------------+--------------+-------+------------------------
+-+--------+-------------
+ Aberdeen township              |  Monmouth    |  2015 |                   12240
+ | 7      | 0.06%
+ Aberdeen township              |  Monmouth    |  2020 |                   14375
+ | 64     | 0.45%
+ Absecon city                   |  Atlantic    |  2015 |                    5679
+ | 2      | 0.03%
+ Absecon city                   |  Atlantic    |  2020 |                    5392
+ | 20     | 0.37%
+ Alexandria township            |  Hunterdon   |  2015 |                    3646
+ | 4      | 0.10%
+ Alexandria township            |  Hunterdon   |  2020 |                    4097
+ | 19     | 0.46%
+ Allamuchy township             |  Warren      |  2015 |                    3549
+ | 2      | 0.05%
+ Allamuchy township             |  Warren      |  2020 |                    3912
+ | 17     | 0.43%
+ Allendale borough              |  Bergen      |  2015 |                    4418
+ | 3      | 0.07%
+ Allendale borough              |  Bergen      |  2020 |                    4321
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM electric_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;f_vehicles;u_vehicles;e_vehicles;l_vehicles;
+[?2004l          municipality          |   county    | years | passenger_cars | total_m
+iles_traveled | fuel_vehicle_emissions 
+--------------------------------+-------------+-------+----------------+--------
+--------------+------------------------
+ Aberdeen township              | Monmouth    |  2017 | 97772592       | 1157795
+66            | 49605
+ Aberdeen township              | Monmouth    |  2019 | 98786829       | 1395026
+19            | 73388
+ Absecon city                   | Atlantic    |  2015 | 38488232       | 1005831
+04            | 46725
+ Absecon city                   | Atlantic    |  2020 | 25192020       | 6236613
+1             | 32488
+ Alexandria township            | Hunterdon   |  2017 | 37796863       | 4661941
+4             | 19086
+ Alexandria township            | Hunterdon   |  2019 | 23745754       | 3353275
+9             | 13312
+ Allamuchy township             | Warren      |  2017 | 33356655       | 4793719
+6             | 18071
+ Allamuchy township             | Warren      |  2019 | 24921165       | 3519262
+3             | 16085
+ Allendale borough              | Bergen      |  2017 | 42564813       | 5827129
+7             | 27772
+ Allendale borough              | Bergen      |  2019 | 45353628       | 5691215
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM fuel_vehicles;[C[1Ps;[1Ps;[1Ps;[1Ps;[1Ps;[C[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;G;H;G;
+[?2004l          municipality          |   county   | years | passenger_vehicle_emissio
+ns | total_mtco2e 
+--------------------------------+------------+-------+--------------------------
+---+--------------
+ Aberdeen township              | Monmouth   |  2015 | 49605                    
+   |        49605
+ Aberdeen township              | Monmouth   |  2020 | 73388                    
+   |        73388
+ Absecon city                   | Atlantic   |  2015 | 46725                    
+   |        46725
+ Absecon city                   | Atlantic   |  2020 | 32488                    
+   |        32488
+ Alexandria township            | Hunterdon  |  2015 | 19086                    
+   |        19086
+ Alexandria township            | Hunterdon  |  2020 | 13312                    
+   |        13312
+ Allamuchy township             | Warren     |  2015 | 18071                    
+   |        18071
+ Allamuchy township             | Warren     |  2020 | 16085                    
+   |        16085
+ Allendale borough              | Bergen     |  2015 | 27772                    
+   |        27772
+ Allendale borough              | Bergen     |  2020 | 30926                    
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM GHG;[1P;[1P;[1P;[1P; ;C;o;m;m;u;n;i;t;y;_;P;r;o;f;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%
+ Aberdeen township              | Monmouth    |  2020 | 5.6          |  18729 | 
+108132                  | 2.9%                | 78%
+ Absecon city                   | Atlantic    |  2015 | 7.2          |   8394 | 
+63656                   | 4.9%                | 91%
+ Absecon city                   | Atlantic    |  2020 | 7.2          |   8471 | 
+69293                   | 9.2%                | 91%
+ Alexandria township            | Hunterdon   |  2015 | 27.7         |   4882 | 
+130262                  | 1.6%                | 91%
+ Alexandria township            | Hunterdon   |  2020 | 27.7         |   4769 | 
+127234                  | 4.4%                | 90%
+ Allamuchy township             | Warren      |  2015 | 20.3         |   4499 | 
+88802                   | 4.0%                | 83%
+ Allamuchy township             | Warren      |  2020 | 20.3         |   4640 | 
+109212                  | 1.9%                | 86%
+ Allendale borough              | Bergen      |  2015 | 3.1          |   6717 | 
+140331                  | 4.0%                | 79%
+ Allendale borough              | Bergen      |  2020 | 3.1          |   6757 | 
+[7m--More--[27m[K[?2004hEVGHG=# [7mSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicl[27m[7me[27m[7ms WHERE municipality = 'municipality name';[27m[A[C[C[C[C[C[C[C[CSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'municipality name';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';Ae';be';se';re';ce';oe';ne'; e';ce';ie';te';ye';[C[1P';
+[?2004lERROR:  column "total_personal" does not exist
+LINE 1: SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM ele...
+               ^
+[?2004hEVGHG=# SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvehicles, NO_EVs, Percent_EVs FROM electric_vehicles[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_vehicles, NO_EVs, Percent_EVs FROM electric_vehicle[1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+(0 rows)
+
+[?2004hEVGHG=# SELECT Total_personal_vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[1P[1P[1@s[1@e
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+                    5679 | 2      | 0.03%
+                    5392 | 20     | 0.37%
+(2 rows)
+
+[?2004hEVGHG=# [7mSELECT * FROM Community_Prof INNER JOIN electric_vehicles ON Community_P[27m[7mr[27m[7mof.YEARS = electric_vehicles.YEARS;[27m[A[C[C[C[C[C[C[C[CSELECT * FROM Community_Prof INNER JOIN electric_vehicles ON Community_Prof.YEARS = electric_vehicles.YEARS;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation |          munici
+pality          |    county    | years | total_personal_vehicles | no_evs | perc
+ent_evs 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------+----------------
+----------------+--------------+-------+-------------------------+--------+-----
+--------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Wyckoff townshi
+p               |  Bergen      |  2015 |                   11639 | 9      | 0.08
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Wrightstown bor
+ough            |  Burlington  |  2015 |                     404 | 0      | 0.10
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Woolwich townsh
+ip              |  Gloucester  |  2015 |                    7378 | 4      | 0.05
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Woodstown borou
+gh              |  Salem       |  2015 |                    2396 | 1      | 0.03
+[7m--More--[27m[K [?2004hEVGHG=#  exit
+[?2004l[?2004hEVGHG-# exit
+[?2004lUse \q to quit.
+[?2004hEVGHG-# \q
+[?2004l]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m cat dbsession.log
+[?2004lScript started on 2023-04-09 18:46:59-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m psql EVGHG
+[?2004lpsql (15.1)
+Type "help" for help.
+
+[?2004hEVGHG=# SELECT * FROM e;[Klectric_vehicles;
+[?2004l          municipality          |    county    | years | total_personal_vehicles
+ | no_evs | percent_evs 
+--------------------------------+--------------+-------+------------------------
+-+--------+-------------
+ Aberdeen township              |  Monmouth    |  2015 |                   12240
+ | 7      | 0.06%
+ Aberdeen township              |  Monmouth    |  2020 |                   14375
+ | 64     | 0.45%
+ Absecon city                   |  Atlantic    |  2015 |                    5679
+ | 2      | 0.03%
+ Absecon city                   |  Atlantic    |  2020 |                    5392
+ | 20     | 0.37%
+ Alexandria township            |  Hunterdon   |  2015 |                    3646
+ | 4      | 0.10%
+ Alexandria township            |  Hunterdon   |  2020 |                    4097
+ | 19     | 0.46%
+ Allamuchy township             |  Warren      |  2015 |                    3549
+ | 2      | 0.05%
+ Allamuchy township             |  Warren      |  2020 |                    3912
+ | 17     | 0.43%
+ Allendale borough              |  Bergen      |  2015 |                    4418
+ | 3      | 0.07%
+ Allendale borough              |  Bergen      |  2020 |                    4321
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM electric_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;f_vehicles;u_vehicles;e_vehicles;l_vehicles;
+[?2004l          municipality          |   county    | years | passenger_cars | total_m
+iles_traveled | fuel_vehicle_emissions 
+--------------------------------+-------------+-------+----------------+--------
+--------------+------------------------
+ Aberdeen township              | Monmouth    |  2017 | 97772592       | 1157795
+66            | 49605
+ Aberdeen township              | Monmouth    |  2019 | 98786829       | 1395026
+19            | 73388
+ Absecon city                   | Atlantic    |  2015 | 38488232       | 1005831
+04            | 46725
+ Absecon city                   | Atlantic    |  2020 | 25192020       | 6236613
+1             | 32488
+ Alexandria township            | Hunterdon   |  2017 | 37796863       | 4661941
+4             | 19086
+ Alexandria township            | Hunterdon   |  2019 | 23745754       | 3353275
+9             | 13312
+ Allamuchy township             | Warren      |  2017 | 33356655       | 4793719
+6             | 18071
+ Allamuchy township             | Warren      |  2019 | 24921165       | 3519262
+3             | 16085
+ Allendale borough              | Bergen      |  2017 | 42564813       | 5827129
+7             | 27772
+ Allendale borough              | Bergen      |  2019 | 45353628       | 5691215
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM fuel_vehicles;[C[1Ps;[1Ps;[1Ps;[1Ps;[1Ps;[C[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;G;H;G;
+[?2004l          municipality          |   county   | years | passenger_vehicle_emissio
+ns | total_mtco2e 
+--------------------------------+------------+-------+--------------------------
+---+--------------
+ Aberdeen township              | Monmouth   |  2015 | 49605                    
+   |        49605
+ Aberdeen township              | Monmouth   |  2020 | 73388                    
+   |        73388
+ Absecon city                   | Atlantic   |  2015 | 46725                    
+   |        46725
+ Absecon city                   | Atlantic   |  2020 | 32488                    
+   |        32488
+ Alexandria township            | Hunterdon  |  2015 | 19086                    
+   |        19086
+ Alexandria township            | Hunterdon  |  2020 | 13312                    
+   |        13312
+ Allamuchy township             | Warren     |  2015 | 18071                    
+   |        18071
+ Allamuchy township             | Warren     |  2020 | 16085                    
+   |        16085
+ Allendale borough              | Bergen     |  2015 | 27772                    
+   |        27772
+ Allendale borough              | Bergen     |  2020 | 30926                    
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM GHG;[1P;[1P;[1P;[1P; ;C;o;m;m;u;n;i;t;y;_;P;r;o;f;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%
+ Aberdeen township              | Monmouth    |  2020 | 5.6          |  18729 | 
+108132                  | 2.9%                | 78%
+ Absecon city                   | Atlantic    |  2015 | 7.2          |   8394 | 
+63656                   | 4.9%                | 91%
+ Absecon city                   | Atlantic    |  2020 | 7.2          |   8471 | 
+69293                   | 9.2%                | 91%
+ Alexandria township            | Hunterdon   |  2015 | 27.7         |   4882 | 
+130262                  | 1.6%                | 91%
+ Alexandria township            | Hunterdon   |  2020 | 27.7         |   4769 | 
+127234                  | 4.4%                | 90%
+ Allamuchy township             | Warren      |  2015 | 20.3         |   4499 | 
+88802                   | 4.0%                | 83%
+ Allamuchy township             | Warren      |  2020 | 20.3         |   4640 | 
+109212                  | 1.9%                | 86%
+ Allendale borough              | Bergen      |  2015 | 3.1          |   6717 | 
+140331                  | 4.0%                | 79%
+ Allendale borough              | Bergen      |  2020 | 3.1          |   6757 | 
+[7m--More--[27m[K[?2004hEVGHG=# [7mSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicl[27m[7me[27m[7ms WHERE municipality = 'municipality name';[27m[A[C[C[C[C[C[C[C[CSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'municipality name';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';Ae';be';se';re';ce';oe';ne'; e';ce';ie';te';ye';[C[1P';
+[?2004lERROR:  column "total_personal" does not exist
+LINE 1: SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM ele...
+               ^
+[?2004hEVGHG=# SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvehicles, NO_EVs, Percent_EVs FROM electric_vehicles[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_vehicles, NO_EVs, Percent_EVs FROM electric_vehicle[1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+(0 rows)
+
+[?2004hEVGHG=# SELECT Total_personal_vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[1P[1P[1@s[1@e
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+                    5]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m cat dbsession.log
+[?2004lScript started on 2023-04-09 18:46:59-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m psql EVGHG
+[?2004lpsql (15.1)
+Type "help" for help.
+
+[?2004hEVGHG=# SELECT * FROM e;[Klectric_vehicles;
+[?2004l          municipality          |    county    | years | total_personal_vehicles
+ | no_evs | percent_evs 
+--------------------------------+--------------+-------+------------------------
+-+--------+-------------
+ Aberdeen township              |  Monmouth    |  2015 |                   12240
+ | 7      | 0.06%
+ Aberdeen township              |  Monmouth    |  2020 |                   14375
+ | 64     | 0.45%
+ Absecon city                   |  Atlantic    |  2015 |                    5679
+ | 2      | 0.03%
+ Absecon city                   |  Atlantic    |  2020 |                    5392
+ | 20     | 0.37%
+ Alexandria township            |  Hunterdon   |  2015 |                    3646
+ | 4      | 0.10%
+ Alexandria township            |  Hunterdon   |  2020 |                    4097
+ | 19     | 0.46%
+ Allamuchy township             |  Warren      |  2015 |                    3549
+ | 2      | 0.05%
+ Allamuchy township             |  Warren      |  2020 |                    3912
+ | 17     | 0.43%
+ Allendale borough              |  Bergen      |  2015 |                    4418
+ | 3      | 0.07%
+ Allendale borough              |  Bergen      |  2020 |                    4321
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM electric_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;[1P_vehicles;f_vehicles;u_vehicles;e_vehicles;l_vehicles;
+[?2004l          municipality          |   county    | years | passenger_cars | total_m
+iles_traveled | fuel_vehicle_emissions 
+--------------------------------+-------------+-------+----------------+--------
+--------------+------------------------
+ Aberdeen township              | Monmouth    |  2017 | 97772592       | 1157795
+66            | 49605
+ Aberdeen township              | Monmouth    |  2019 | 98786829       | 1395026
+19            | 73388
+ Absecon city                   | Atlantic    |  2015 | 38488232       | 1005831
+04            | 46725
+ Absecon city                   | Atlantic    |  2020 | 25192020       | 6236613
+1             | 32488
+ Alexandria township            | Hunterdon   |  2017 | 37796863       | 4661941
+4             | 19086
+ Alexandria township            | Hunterdon   |  2019 | 23745754       | 3353275
+9             | 13312
+ Allamuchy township             | Warren      |  2017 | 33356655       | 4793719
+6             | 18071
+ Allamuchy township             | Warren      |  2019 | 24921165       | 3519262
+3             | 16085
+ Allendale borough              | Bergen      |  2017 | 42564813       | 5827129
+7             | 27772
+ Allendale borough              | Bergen      |  2019 | 45353628       | 5691215
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM fuel_vehicles;[C[1Ps;[1Ps;[1Ps;[1Ps;[1Ps;[C[1P;[1P;[1P;[1P;[1P;[1P;[1P;[1P;G;H;G;
+[?2004l          municipality          |   county   | years | passenger_vehicle_emissio
+ns | total_mtco2e 
+--------------------------------+------------+-------+--------------------------
+---+--------------
+ Aberdeen township              | Monmouth   |  2015 | 49605                    
+   |        49605
+ Aberdeen township              | Monmouth   |  2020 | 73388                    
+   |        73388
+ Absecon city                   | Atlantic   |  2015 | 46725                    
+   |        46725
+ Absecon city                   | Atlantic   |  2020 | 32488                    
+   |        32488
+ Alexandria township            | Hunterdon  |  2015 | 19086                    
+   |        19086
+ Alexandria township            | Hunterdon  |  2020 | 13312                    
+   |        13312
+ Allamuchy township             | Warren     |  2015 | 18071                    
+   |        18071
+ Allamuchy township             | Warren     |  2020 | 16085                    
+   |        16085
+ Allendale borough              | Bergen     |  2015 | 27772                    
+   |        27772
+ Allendale borough              | Bergen     |  2020 | 30926                    
+[7m--More--[27m[K[?2004hEVGHG=# SELECT * FROM GHG;[1P;[1P;[1P;[1P; ;C;o;m;m;u;n;i;t;y;_;P;r;o;f;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%
+ Aberdeen township              | Monmouth    |  2020 | 5.6          |  18729 | 
+108132                  | 2.9%                | 78%
+ Absecon city                   | Atlantic    |  2015 | 7.2          |   8394 | 
+63656                   | 4.9%                | 91%
+ Absecon city                   | Atlantic    |  2020 | 7.2          |   8471 | 
+69293                   | 9.2%                | 91%
+ Alexandria township            | Hunterdon   |  2015 | 27.7         |   4882 | 
+130262                  | 1.6%                | 91%
+ Alexandria township            | Hunterdon   |  2020 | 27.7         |   4769 | 
+127234                  | 4.4%                | 90%
+ Allamuchy township             | Warren      |  2015 | 20.3         |   4499 | 
+88802                   | 4.0%                | 83%
+ Allamuchy township             | Warren      |  2020 | 20.3         |   4640 | 
+109212                  | 1.9%                | 86%
+ Allendale borough              | Bergen      |  2015 | 3.1          |   6717 | 
+140331                  | 4.0%                | 79%
+ Allendale borough              | Bergen      |  2020 | 3.1          |   6757 | 
+[7m--More--[27m[K[?2004hEVGHG=# [7mSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicl[27m[7me[27m[7ms WHERE municipality = 'municipality name';[27m[A[C[C[C[C[C[C[C[CSELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'municipality name';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';[1Pe';Ae';be';se';re';ce';oe';ne'; e';ce';ie';te';ye';[C[1P';
+[?2004lERROR:  column "total_personal" does not exist
+LINE 1: SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM ele...
+               ^
+[?2004hEVGHG=# SELECT Total_personal-vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvehicles, NO_EVs, Percent_EVs FROM electric_vehicles[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_vehicles, NO_EVs, Percent_EVs FROM electric_vehicle[1@s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+(0 rows)
+
+[?2004hEVGHG=# SELECT Total_personal_vehicles, NO_EVs, Percent_EVs FROM electric_vehicles WHERE municipality = 'Absrcon city';[1P[1P[1@s[1@e
+[?2004l total_personal_vehicles | no_evs | percent_evs 
+-------------------------+--------+-------------
+                    5679 | 2      | 0.03%
+                    5392 | 20     | 0.37%
+(2 rows)
+
+[?2004hEVGHG=# [7mSELECT * FROM Community_Prof INNER JOIN electric_vehicles ON Community_P[27m[7mr[27m[7mof.YEARS = electric_vehicles.YEARS;[27m[A[C[C[C[C[C[C[C[CSELECT * FROM Community_Prof INNER JOIN electric_vehicles ON Community_Prof.YEARS = electric_vehicles.YEARS;
+[?2004l          municipality          |   county    | years | square_miles |  pop   | 
+medium_household_income | percent_pop_poverty | transportation |          munici
+pality          |    county    | years | total_personal_vehicles | no_evs | perc
+ent_evs 
+--------------------------------+-------------+-------+--------------+--------+-
+------------------------+---------------------+----------------+----------------
+----------------+--------------+-------+-------------------------+--------+-----
+--------
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Wyckoff townshi
+p               |  Bergen      |  2015 |                   11639 | 9      | 0.08
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Wrightstown bor
+ough            |  Burlington  |  2015 |                     404 | 0      | 0.10
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Woolwich townsh
+ip              |  Gloucester  |  2015 |                    7378 | 4      | 0.05
+%
+ Aberdeen township              | Monmouth    |  2015 | 5.6          |  18282 | 
+84720                   | 6.7%                | 84%            | Woodstown borou
+gh              |  Salem       |  2015 |                    2396 | 1      | 0.03
+[7m--More--[27m[K [?2004hEVGHG=#  exit
+[?2004l[?2004hEVGHG-# exit
+[?2004lUse \q to quit.
+[?2004hEVGHG-# \q
+[?2004l]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m cat dbsession.log
+[?2004lScript started on 2023-04-09 18:46:59-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;lion@roscoe:~/dbs[?2004h[01;32m[lion@roscoe[01;37m dbs[01;32m]$[00m psql EVGHG
+[?2004lpsql (15.1)
+Type "help" for help.
+
+[?2004hEVGHG=# SELECT * FROM e;[Klectric_vehicles;
+[?2004l          municipality          |    county    | years | total_personal_vehicles
+ | no_evs | percent_evs 
+--------------------------------+--------------+-------+------------------------
+-+--------+-------------
+ Aberdeen township              |  Monmouth    |  2015 |                   12240
+ | 7      | 0.06%
+ Aberdeen township              |  Monmouth    |  2020 |                   14375
+ | 64     | 0.45%
+ Absecon city                   |  Atlantic    |  2015 |                   

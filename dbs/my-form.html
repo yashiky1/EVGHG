@@ -1,0 +1,130 @@
+
+<!-- /templates/my-form.html-->
+
+<html>
+    <head>
+        <title>Welcome to EVGHG</title>
+		<style>
+h3{
+	color: #4F9070;
+}
+body {
+	background-image: url("https://images.unsplash.com/photo-1431203488627-64527eb86dd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHw%3D&w=1000&q=80");
+    background-size: cover;
+	background-repeat: no-repeat;
+    text-align: center;
+	color: #FFFFFF;
+}
+
+#div1{
+	color: #4F9070;
+}
+
+
+input[type=submit] {
+  background-color: #588970; /* set background color to green */
+  color: white; /* set text color to white */
+  border: none; /* remove border */
+  padding: 10px 20px; /* add padding */
+  text-align: center; /* center the text */
+  text-decoration: none; /* remove underline */
+  display: inline-block; /* display as block element */
+  font-size: 16px; /* set font size */
+  margin: 4px 2px; /* add margin */
+  cursor: pointer; /* add cursor pointer */
+	border-radius: 35%;
+}
+
+/* set hover effect */
+input[type=submit]:hover {
+  background-color: #3e8e41; /* set darker background color when hover */
+}
+</style>
+    </head>
+    <body>
+	    <h3>EVGHG Database</h3>
+
+        <form action="/municipality-handler" method="POST">
+            <div id="div1">
+                Enter name of municipality to view Total personal vehicles, No. of EVs, and % of EVs from the EV table
+                <input type="text" name="MUNICIPALITY" id="MUNICIPALITY">
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+
+		<h4>EVGHG Tables</h4>
+        <form action="/dropdown-handler" method="POST">
+            <div>
+                Select which table you wish to view
+                <!<input type="text" name="venue_id">
+				<label for = "table">(choose a table):</label>
+				<select name = "table" id = "table">
+					<option value = "electric_vehicles">electric_vehicles</option>
+					<option value = "fuel_vehicles">fuel_vehicles</option>
+					<option value = "ghg">ghg</option>
+					<option value = "Community_Prof">Community_Prof</option>
+            </div>
+                <input type="submit" value="View">
+        </form>
+
+        <h4>Highest EV Ownership</h4>
+        <form action="/EVownership-handler" method="POST">
+            <div>
+                View the municipalities with the highest EV ownership
+                <!<input type="text" name="query">
+            </div>
+                <input type="submit" value="View">
+        </form>
+
+        <h4>Highest Fuel Vehicle Emissions</h4>
+        <form action="/FVemissions-handler" method="POST">
+            <div>
+                View the municipalities with the highest fuel vehicle emissions
+                <!<input type="text" name="query">
+            </div>
+                <input type="submit" value="View">
+        </form>
+
+        <h4>Compare the data between the electric vehicle and fuel vehicle tables</h4>
+        <form action="/FVJOINEV-handler" method="POST">
+            <div>
+                View the data of Percent EVs and Fuel vehicles emissions by municipality
+                <!<input type="text" name="query">
+            </div>
+                <input type="submit" value="View">
+        </form>
+
+      <h4>Compare the data between the fuel vehicle and community profile tables</h4>
+        <form action="/FVJOINCP-handler" method="POST">
+            <div>
+                View the data of fuel vehicle emissions and community profile data
+                <!<input type="text" name="query">
+            </div>
+                <input type="submit" value="View">
+        </form>
+
+        <h4>Compare the data between the electric vehicle and green house gas tables</h4>
+        <form action="/GHGJOINEV-handler" method="POST">
+            <div>
+                View the data of total personal vehicles, number of EVs, percent of EVs, fuel vehicle emissions, and total MTCo2e
+                <!<input type="text" name="query">
+            </div>
+                <input type="submit" value="View">
+        </form>
+		<footer id="sj" align="right">
+		<p> All data used from Sustainable Jersey </p>
+		<img src="https://tse1.mm.bing.net/th?id=OIP.VZWF9T9wCnKP3NhWRsBTxgHaFe&pid=Api&P=0" width="55" height="60">
+		</footer>
+
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 1%;
+        }
+
+        div {
+            margin: 1% 0;
+        }
+    </style>
+</html>
